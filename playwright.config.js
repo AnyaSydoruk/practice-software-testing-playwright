@@ -23,8 +23,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: 2,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "html",
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  reporter: [["list"], ["html", { open: "never" }]],
   use: {
     baseURL: "https://practicesoftwaretesting.com",
     headless: true,
